@@ -28,6 +28,7 @@ public class DetailActivity extends YouTubeBaseActivity {
     public static final String VIDEOS_URL = "https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     TextView tvTitle;
     TextView tvOverview;
+    TextView numStars;
     RatingBar ratingBar;
     YouTubePlayerView youTubePlayerView;
 
@@ -41,12 +42,14 @@ public class DetailActivity extends YouTubeBaseActivity {
         tvOverview = findViewById(R.id.tvOverview);
         ratingBar = findViewById(R.id.ratingBar);
         youTubePlayerView = findViewById(R.id.player);
+        numStars = findViewById(R.id.numStars);
 
         //String title = getIntent().getStringExtra("title");
         Movie movie = Parcels.unwrap(getIntent().getParcelableExtra("movie"));
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
         ratingBar.setRating((float)movie.getRating());
+        numStars.setText((float) movie.getRating() + " stars");
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(String.format(VIDEOS_URL, movie.getMovieId()), new JsonHttpResponseHandler() {

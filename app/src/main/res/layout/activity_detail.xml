@@ -21,8 +21,10 @@
         android:layout_height="wrap_content"
         android:transitionName="title"
         android:textColor="@color/colorWhite"
+        android:fontFamily="serif"
         android:text="TextView"
         android:textSize="30sp"
+        android:textStyle="bold"
         tools:text="Hard Kill" />
 
     <RatingBar
@@ -32,13 +34,27 @@
         android:layout_height="wrap_content"
         android:isIndicator="true"
         android:numStars="10"
-        android:rating="8.5" />
+        android:rating="8.5" /><![CDATA[
+
+    android:text="TextView" />
+
+    ]]>
+
+    <TextView
+        android:id="@+id/numStars"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="serif"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        tools:text="3.5 stars" />
 
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:textColor="@color/colorWhite"
-        android:textSize="15sp"
+        android:textSize="17sp"
         tools:text="The work of billionaire tech CEO Donovan Chalmers is so valuable that he hires mercenaries to protect it, and a terrorist group kidnaps his daughter just to get it." />
 </LinearLayout>
