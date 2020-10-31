@@ -22,13 +22,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="walkthrough2.gif" width=250><br>
 
 ### Notes
 
-Describe any challenges encountered while building the app.
+Had difficulties implementing stretch stories that I will discuss on the meeting. Shortly: rounding corners did not work for images, transformations also did not work. Had issues with where to put Glide AppModule script. Had difficulties where and how to put the placeholder image (its shown while fetching the data from json obj through http request)
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
